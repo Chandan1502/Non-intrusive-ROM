@@ -70,7 +70,7 @@ time_start=clock;
 disp(time_start)
 
 parfor i=1:2000
-    [t,~,f_t] = excitation_simulation(omega_min,omega_max,t_final,dt,'CP');
+    [t,f_t,~] = excitation_simulation(omega_min,omega_max,t_final,dt,'CP');
 
     % HDM Solution for new force
     time_start_HDM=clock;
