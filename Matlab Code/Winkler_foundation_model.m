@@ -74,7 +74,7 @@ t=0:dt:t_final;
 Nsnap=1000; % # of snapshots
 Snap_interval=floor(N/Nsnap);
 parfor i=1:NumRealization
-    [~,~,f_t] = excitation_simulation(omega_min,omega_max,t_final,dt,'CP');   
+    [~,f_t,~] = excitation_simulation(omega_min,omega_max,t_final,dt,'CP');   
     F=zeros(Ndof,N);
     F(:,:)=amp_vec.*f_t;
 
