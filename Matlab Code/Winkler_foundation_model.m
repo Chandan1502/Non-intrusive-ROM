@@ -90,3 +90,5 @@ S_SVD=reshape(S_big,Ndof,[]);
 [si,sigma,phi]=svd(S_SVD,"econ");
 SingularValues=diag(sigma);
 PODBases=si;
+% Save the results
+save("Results_BLWF.mat",'-v7.3')
